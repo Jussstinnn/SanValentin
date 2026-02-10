@@ -75,14 +75,15 @@ export const defaultConfig: AppConfig = {
     },
   ],
 
-  gallery: [
-  img('photos/01.jpeg'),
-  img('photos/02.jpeg'),
-  img('photos/03.jpeg'),
-  img('photos/04.jpeg'),
-  img('photos/05.jpeg'),
-  img('photos/06.jpeg'),
+ gallery: [
+  `${import.meta.env.BASE_URL}photos/01.jpeg`,
+  `${import.meta.env.BASE_URL}photos/02.jpeg`,
+  `${import.meta.env.BASE_URL}photos/03.jpeg`,
+  `${import.meta.env.BASE_URL}photos/04.jpeg`,
+  `${import.meta.env.BASE_URL}photos/05.jpeg`,
+  `${import.meta.env.BASE_URL}photos/06.jpeg`,
 ],
+
 
   playfulMessages: ['¿En serio? 😳', '¿Estás segura? 🥺', 'Me daré cuenta de tu respuesta 👀', 'Sophiaaaaa 😭💗', 'De verdad es lo que quieres?', 'Ok… lo intento otra vez 😤💘'],
 
