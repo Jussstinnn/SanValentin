@@ -2,15 +2,17 @@ import type { TimelineItem } from '../types'
 import { motion } from 'framer-motion'
 
 export default function Timeline({ items }: { items: TimelineItem[] }) {
+  const BASE = import.meta.env.BASE_URL
+
   const resolveUrl = (p?: string) => {
     if (!p) return ''
     const v = p.trim()
     if (!v) return ''
     if (v.startsWith('http://') || v.startsWith('https://') || v.startsWith('data:')) return v
-    // If user already includes leading slash, keep it.
-    if (v.startsWith('/')) return v
+    // On GitHub Pages the app lives under a sub-path, so we must always prefix with BASE.
+    if (v.startsWith('/')) return `${BASE}${v.replace(/^\/+/, '')}`
     // Otherwise treat it as a path inside /public
-    return `${import.meta.env.BASE_URL}${v.replace(/^\.\//, '')}`
+    return `${BASE}${v.replace(/^\.\//, '')}`
   }
 
   return (

@@ -14,7 +14,14 @@ export default function PolaroidGallery({ photos }: { photos: string[] }) {
           style={{ transform: `rotate(${(idx % 3 - 1) * 1.5}deg)` }}
         >
           <div className="overflow-hidden rounded-2xl">
-            <img src={src} alt={`Foto ${idx + 1}`} className="h-64 w-full object-cover" loading="eager" decoding="async" />
+            <img
+              src={src}
+              alt={`Foto ${idx + 1}`}
+              className="h-64 w-full object-cover"
+              // iOS Safari can stutter if we eagerly load many large photos.
+              loading={idx < 2 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
           </div>
           <figcaption className="mt-3 text-center text-sm font-semibold text-black/70">
             {idx % 2 === 0 ? '💗' : '✨'}

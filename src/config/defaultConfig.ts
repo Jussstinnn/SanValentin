@@ -1,5 +1,9 @@
 import type { AppConfig } from '../types'
 
+// NOTE: On GitHub Pages this site is served from a sub-path (e.g. /SanValentin/).
+// Always prefix static assets with Vite's BASE_URL so images work on *all* devices/browsers.
+const BASE = import.meta.env.BASE_URL
+
 export const defaultConfig: AppConfig = {
   girlfriendName: 'Sophia',
   yourName: 'Justin',
@@ -27,55 +31,55 @@ export const defaultConfig: AppConfig = {
       date: '5 Jul 2024',
       title: 'Primera vez que nos vimos',
       note: '¿Te acuerdas como estabas de nerviosa? Ni me veías a los ojos.',
-      photo: '/timeline/2024-07-05.jpeg',
+      photo: `${BASE}timeline/2024-07-05.jpeg`,
     },
     {
       date: '13 Jul 2024',
       title: 'Primera vez en mi casa',
       note: 'Estabas muerta de nervios por conocer a mi familia.',
-      photo: '/timeline/2024-07-13.jpeg',
+      photo: `${BASE}timeline/2024-07-13.jpeg`,
     },
     {
       date: '3 Ago 2024',
       title: 'Arrollado',
       note: 'Te llevé a probar el arrollado que tanto querías probar.',
-      photo: '/timeline/2024-08-03.jpeg',
+      photo: `${BASE}timeline/2024-08-03.jpeg`,
     },
     {
       date: '11 Oct 2024',
       title: 'City Bakery',
       note: 'Fuimos al restaurante del que tanto me hablabas.',
-      photo: '/timeline/2024-10-11.jpeg',
+      photo: `${BASE}timeline/2024-10-11.jpeg`,
     },
     {
       date: '18 Oct 2024',
       title: 'Payasos',
       note: 'Primera vez que fui a los payasos y fue por ti.',
-      photo: '/timeline/2024-10-18.jpeg',
+      photo: `${BASE}timeline/2024-10-18.jpeg`,
     },
     {
       date: '14 Feb 2025',
       title: 'Flores',
       note: 'Primera vez que te di flores.',
-      photo: '/timeline/2025-02-14.jpeg',
+      photo: `${BASE}timeline/2025-02-14.jpeg`,
     },
     {
       date: '5 Abr 2025',
       title: 'Festival Japonés',
       note: 'Fuimos al festival japonés y compramos cosas.',
-      photo: '/timeline/2025-04-05.jpeg',
+      photo: `${BASE}timeline/2025-04-05.jpeg`,
     },
     {
       date: '9 Ago 2025',
       title: 'Pulsera y Santería',
       note: 'Me regalaste la pulsera que nunca me he quitado y fuimos a santería.',
-      photo: '/timeline/2025-08-09.jpeg',
+      photo: `${BASE}timeline/2025-08-09.jpeg`,
     },
     {
       date: '25 Ago 2025',
       title: 'Snowty',
       note: 'Fuimos a Snowty y estabas feliz.',
-      photo: '/timeline/2025-08-25.jpeg',
+      photo: `${BASE}timeline/2025-08-25.jpeg`,
     },
     {
       date: '∞',
@@ -84,7 +88,14 @@ export const defaultConfig: AppConfig = {
     },
   ],
 
-  gallery: ['/photos/01.jpeg', '/photos/02.jpeg', '/photos/03.jpeg', '/photos/04.jpeg', '/photos/05.jpeg', '/photos/06.jpeg'],
+  gallery: [
+    `${BASE}photos/01.jpeg`,
+    `${BASE}photos/02.jpeg`,
+    `${BASE}photos/03.jpeg`,
+    `${BASE}photos/04.jpeg`,
+    `${BASE}photos/05.jpeg`,
+    `${BASE}photos/06.jpeg`,
+  ],
 
   playfulMessages: ['¿En serio? 😳', '¿Estás segura? 🥺', 'Me daré cuenta de tu respuesta 👀', 'Sophiaaaaa 😭💗', 'Justin está nervioso 🙈', 'Ok… lo intento otra vez 😤💘'],
 
