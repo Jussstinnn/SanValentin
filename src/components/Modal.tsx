@@ -25,7 +25,7 @@ export default function Modal({
           }}
         >
           <motion.div
-            className="relative w-full max-w-xl overflow-hidden rounded-3xl border border-white/60 bg-white/90 shadow-soft backdrop-blur"
+            className="relative w-full max-w-xl overflow-hidden rounded-3xl border border-white/60 bg-white/90 shadow-soft backdrop-blur-0 sm:backdrop-blur"
             initial={{ y: 18, opacity: 0, scale: 0.98 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 10, opacity: 0, scale: 0.98 }}

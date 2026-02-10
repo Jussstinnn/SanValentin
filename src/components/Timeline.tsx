@@ -35,7 +35,7 @@ export default function Timeline({ items }: { items: TimelineItem[] }) {
                     <img
                       src={resolveUrl(it.photo)}
                       alt={it.title}
-                      loading="lazy"
+                      loading="lazy" decoding="async"
                       className="h-28 w-full rounded-2xl object-cover"
                     />
                   </div>

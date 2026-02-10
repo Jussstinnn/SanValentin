@@ -208,9 +208,9 @@ export default function App() {
         }}
       >
         <div className="noise pointer-events-none absolute inset-0 opacity-60" />
-      {config.toggles.floatingHearts && <FloatingHearts count={60} />}
+      {config.toggles.floatingHearts && <FloatingHearts countDesktop={160} countMobile={55} />}
 
-        <header className="sticky top-0 z-30 border-b border-black/5 bg-white/55 backdrop-blur">
+        <header className="sticky top-0 z-30 border-b border-black/5 bg-white/55 backdrop-blur-0 sm:backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
             <div className="flex items-center gap-3">
               <div

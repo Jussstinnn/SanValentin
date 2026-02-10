@@ -104,7 +104,7 @@ export default function CustomizerDrawer({
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-white/85 px-4 py-3 text-sm font-extrabold shadow-soft ring-1 ring-black/10 backdrop-blur transition hover:scale-[1.02] active:scale-[0.98]"
+        className="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-white/85 px-4 py-3 text-sm font-extrabold shadow-soft ring-1 ring-black/10 backdrop-blur-0 sm:backdrop-blur transition hover:scale-[1.02] active:scale-[0.98]"
       >
         <Settings className="h-4 w-4" />
         Personalizar
@@ -122,7 +122,7 @@ export default function CustomizerDrawer({
             }}
           >
             <motion.aside
-              className="h-full w-full max-w-md overflow-y-auto bg-[rgba(255,255,255,0.92)] p-5 backdrop-blur"
+              className="h-full w-full max-w-md overflow-y-auto bg-[rgba(255,255,255,0.92)] p-5 backdrop-blur-0 sm:backdrop-blur"
               initial={{ x: 30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 30, opacity: 0 }}
