@@ -2,6 +2,8 @@ export type TimelineItem = {
   date: string
   title: string
   note: string
+  /** Optional photo for this moment. Can be an absolute URL or a path inside /public (e.g. photos/timeline/01.jpg). */
+  photo?: string
 }
 
 export type ThemePreset = 'cute' | 'elegant' | 'dreamy'

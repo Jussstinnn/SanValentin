@@ -274,6 +274,23 @@ export default function CustomizerDrawer({
                               }}
                             />
                           </div>
+
+                          <div className="space-y-1">
+                            <Label>Foto (opcional)</Label>
+                            <TextInput
+                              placeholder="Ej: photos/timeline/01.jpg o https://..."
+                              value={t.photo ?? ''}
+                              onChange={(e) => {
+                                const next = [...config.timeline]
+                                const v = e.target.value.trim()
+                                next[idx] = { ...next[idx], photo: v ? v : undefined }
+                                updateTimeline(next)
+                              }}
+                            />
+                            <div className="text-xs text-black/50">
+                              Tip: si subes la imagen al repo en <b>public/photos/timeline</b>, solo escribe <b>photos/timeline/01.jpg</b>.
+                            </div>
+                          </div>
                         </div>
                       </div>
                     ))}
