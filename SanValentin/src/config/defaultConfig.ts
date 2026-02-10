@@ -1,0 +1,97 @@
+import type { AppConfig } from '../types'
+
+export const defaultConfig: AppConfig = {
+  girlfriendName: 'Sophia',
+  yourName: 'Justin',
+
+  heroTitle: 'Mi amor, ¿quieres ser mi San Valentín? 💘',
+  heroSubtitle: 'Te hice esta mini página para decirte algo simple pero gigante: quiero seguir viviendo todo contigo.',
+
+  yesButtonText: 'Sí, obvio ❤️',
+  thinkButtonText: 'Lo tengo que pensar 🙈',
+
+  yesMessageTitle: '¡Sabía que dirías que sí! 🥹💞',
+  yesMessageBody:
+    'Gracias por un año mas ser mi san valentin, te amo muchisimo y espero siempre pasemos este dia juntos',
+
+  reasons: [
+    'Eres la mujer mas hermosa que hay en el mundo para mi',
+    'No existe otra igual jamas',
+    'Tu manera de ser es muy especial',
+    'No eres igual al resto',
+    'Una persona increible',
+  ],
+
+  timeline: [
+    {
+      date: '5 Jul 2024',
+      title: 'Primera vez que nos vimos',
+      note: '¿Te acuerdas como estabas de nerviosa? Ni me veías a los ojos.',
+    },
+    {
+      date: '13 Jul 2024',
+      title: 'Primera vez en mi casa',
+      note: 'Estabas muerta de nervios por conocer a mi familia.',
+    },
+    {
+      date: '3 Ago 2024',
+      title: 'Arrollado',
+      note: 'Te llevé a probar el arrollado que tanto querías probar.',
+    },
+    {
+      date: '11 Oct 2024',
+      title: 'City Bakery',
+      note: 'Fuimos al restaurante del que tanto me hablabas.',
+    },
+    {
+      date: '18 Oct 2024',
+      title: 'Payasos',
+      note: 'Primera vez que fui a los payasos y fue por ti.',
+    },
+    {
+      date: '14 Feb 2025',
+      title: 'Flores',
+      note: 'Primera vez que te di flores.',
+    },
+    {
+      date: '5 Abr 2025',
+      title: 'Festival Japonés',
+      note: 'Fuimos al festival japonés y compramos cosas.',
+    },
+    {
+      date: '9 Ago 2025',
+      title: 'Pulsera y Santería',
+      note: 'Me regalaste la pulsera que nunca me he quitado y fuimos a santería.',
+    },
+    {
+      date: '25 Ago 2025',
+      title: 'Snowty',
+      note: 'Fuimos a Snowty y estabas feliz.',
+    },
+    {
+      date: '∞',
+      title: 'Lo que falta por vivir',
+      note: 'Me faltaron muchas más cosas… y todas las que quedan por vivir.',
+    },
+  ],
+
+  gallery: ['/photos/01.jpeg', '/photos/02.jpeg', '/photos/03.jpeg', '/photos/04.jpeg', '/photos/05.jpeg', '/photos/06.jpeg'],
+
+  playfulMessages: ['¿En serio? 😳', '¿Estás segura? 🥺', 'Me daré cuenta de tu respuesta 👀', 'Sophiaaaaa 😭💗', 'Justin está nervioso 🙈', 'Ok… lo intento otra vez 😤💘'],
+
+  theme: {
+    preset: 'cute',
+    // Pastel/Sanrio-ish palette
+    primary: '#ff4da6',
+    secondary: '#7c5cff',
+    cream: '#fff3f8',
+    text: '#241a22',
+    card: '#ffffff',
+  },
+
+  toggles: {
+    floatingHearts: true,
+    confetti: true,
+    typewriterSubtitle: true,
+  },
+}
