@@ -1,7 +1,7 @@
 import type { AppConfig } from '../types'
 import { defaultConfig } from '../config/defaultConfig'
 
-const KEY = 'sv-config-v3'
+const KEY = 'sv-config-v1'
 
 
 function isObject(v: unknown): v is Record<string, unknown> {
