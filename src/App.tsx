@@ -380,7 +380,7 @@ export default function App() {
             </div>
 
             <div className="text-xs text-black/50">
-              Si no descarga en iPhone, mantén presionada la imagen cuando se abra en nueva pestaña.
+              
             </div>
           </div>
         </Modal>
