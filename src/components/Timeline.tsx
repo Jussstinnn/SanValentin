@@ -1,19 +1,8 @@
 import type { TimelineItem } from '../types'
 import { motion } from 'framer-motion'
+import { assetUrl } from '../lib/assetUrl'
 
 export default function Timeline({ items }: { items: TimelineItem[] }) {
-  const BASE = import.meta.env.BASE_URL
-
-  const resolveUrl = (p?: string) => {
-    if (!p) return ''
-    const v = p.trim()
-    if (!v) return ''
-    if (v.startsWith('http://') || v.startsWith('https://') || v.startsWith('data:')) return v
-    // On GitHub Pages the app lives under a sub-path, so we must always prefix with BASE.
-    if (v.startsWith('/')) return `${BASE}${v.replace(/^\/+/, '')}`
-    // Otherwise treat it as a path inside /public
-    return `${BASE}${v.replace(/^\.\//, '')}`
-  }
 
   return (
     <ol className="relative ml-3 border-l-2 border-black/10">
@@ -32,13 +21,13 @@ export default function Timeline({ items }: { items: TimelineItem[] }) {
           <div className="rounded-3xl bg-white/90 p-5 shadow-soft ring-1 ring-black/5">
             <div className={it.photo ? 'grid gap-4 sm:grid-cols-[140px_1fr] sm:items-start' : ''}>
               {it.photo && (
-                <div className="sm:pt-1">
+                <div className="sm:pt-1 mx-auto w-full max-w-[360px] sm:mx-0 sm:max-w-none">
                   <div className="rounded-3xl bg-white p-2 shadow-soft ring-1 ring-black/10">
                     <img
-                      src={resolveUrl(it.photo)}
+                      src={assetUrl(it.photo)}
                       alt={it.title}
                       loading="lazy" decoding="async"
-                      className="h-28 w-full rounded-2xl object-cover"
+                      className="w-full aspect-square rounded-2xl object-cover"
                     />
                   </div>
                 </div>

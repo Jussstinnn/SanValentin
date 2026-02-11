@@ -21,7 +21,7 @@ type Props = {
  * Floating hearts overlay.
  * Optimized for iOS/mobile: fewer nodes + cheaper effects.
  */
-export default function FloatingHearts({ count, countDesktop = 120, countMobile = 42 }: Props) {
+export default function FloatingHearts({ count, countDesktop = 180, countMobile = 70 }: Props) {
   const isBrowser = typeof window !== 'undefined'
   const isSmall =
     isBrowser && typeof window.matchMedia === 'function'
@@ -51,7 +51,8 @@ export default function FloatingHearts({ count, countDesktop = 120, countMobile 
 
     return Array.from({ length: effectiveCount }).map((_, i) => {
       const left = `${-5 + Math.random() * 110}%`
-      const top = `${-10 + Math.random() * 120}%` // cover whole viewport (not only bottom)
+      // Start above the viewport so hearts naturally drift through the whole screen.
+      const top = `${-(20 + Math.random() * 40)}%`
       const delay = `${Math.random() * 6}s`
       const duration = `${6 + Math.random() * 8}s`
       const size = 12 + Math.random() * 20
@@ -80,7 +81,7 @@ export default function FloatingHearts({ count, countDesktop = 120, countMobile 
           style={{
             left: h.left,
             top: h.top,
-            animation: `floatUp ${h.duration} linear ${h.delay} infinite`,
+            animation: `floatDown ${h.duration} linear ${h.delay} infinite`,
             transform: 'translateZ(0)',
           }}
         >
@@ -109,10 +110,10 @@ export default function FloatingHearts({ count, countDesktop = 120, countMobile 
 
       <style>
         {`
-        @keyframes floatUp {
+        @keyframes floatDown {
           0%   { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
           10%  { opacity: 0.7; }
-          100% { transform: translate3d(0, -140vh, 0) rotate(30deg); opacity: 0; }
+          100% { transform: translate3d(0, 160vh, 0) rotate(30deg); opacity: 0; }
         }
         @keyframes drift {
           0%   { transform: translate3d(0, 0, 0) rotate(0deg); }

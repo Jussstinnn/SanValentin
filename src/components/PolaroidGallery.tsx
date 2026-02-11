@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { assetUrl } from '../lib/assetUrl'
 
 export default function PolaroidGallery({ photos }: { photos: string[] }) {
   return (
@@ -15,7 +16,7 @@ export default function PolaroidGallery({ photos }: { photos: string[] }) {
         >
           <div className="overflow-hidden rounded-2xl">
             <img
-              src={src}
+              src={assetUrl(src)}
               alt={`Foto ${idx + 1}`}
               className="h-64 w-full object-cover"
               // iOS Safari can stutter if we eagerly load many large photos.
