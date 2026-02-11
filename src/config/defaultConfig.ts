@@ -4,7 +4,7 @@ export const defaultConfig: AppConfig = {
   girlfriendName: 'Sophia',
   yourName: 'Justin',
 
-  heroTitle: 'Mi amor, ¿quieres ser mi San Valentín? 💘',
+  heroTitle: 'Mi vida, ¿quieres ser mi San Valentín? 💘',
   heroSubtitle: 'Te hice esta mini página para decirte algo simple pero gigante: quiero seguir viviendo todo contigo.',
 
   yesButtonText: 'Sí, obvio ❤️',
